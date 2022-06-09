@@ -7,12 +7,67 @@ body{
     padding: 0;
 }
 
+main-wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+about-wrapper{
+    width: 100%;
+    height: 300px;
+    background-color: rgb(255, 15, 223);
+
+    
+}
+
+about-wrapper p{
+    margin: 25px;
+    text-align: justify;
+}
+
+h1{
+    margin: 25px;
+}
+
 header{
     width: 100%;
     height: 150px;
     display: flex;
+    justify-content:center;
+    
+    
+}
+
+header ul{
+    text-decoration: none;
+    list-style-type: none;
+
+    display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+header ul a:link, a:after, a:visited, a:hover{
+    text-decoration: none;
+    background-color: blue;
+}
+
+header ul li{
+    margin: 0px 15px;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform:uppercase;
+    color: #000;
+    
+}
+
+atag-logo .logo{
+    width: 155px;
+    height: auto;
+    margin: 35px 100px;
     
 }
 
