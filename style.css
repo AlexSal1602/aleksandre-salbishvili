@@ -1,4 +1,5 @@
 body{
+    box-sizing: border-box;
     background-color: #ffde00;
     color: rgb(54, 54, 54);
     font-family: 'Merriweather Sans', sans-serif;
@@ -17,11 +18,30 @@ header{
 
 
 
-.logo{
+.logo-yellow{
     width: 175px;
     height: auto;
     margin: 35px 100px;
+    transform: scale(1.2);
+    opacity: .7;
     
+}
+
+/*.logo-yellow:after{
+    opacity: 1;
+    animation: animate 2s ease-in;
+}
+*/
+
+@keyframes logo-yellow {
+    0%{transform: scale(1); -webkit-transform: scale(1.2); opacity: 1;}
+    50%{transform: scale(.9); -webkit-transform: scale(.8); opacity: .5;}
+    100%{transform: scale(1); -webkit-transform: scale(1.2); opacity: 1;}
+}
+
+.logo-yellow {
+    animation: logo-yellow 2s ease-in-out infinite alternate;
+    -webkit-animation: logo-yellow 2s ease-in-out infinite alternate;
 }
 
 
@@ -39,19 +59,15 @@ header{
     justify-content: center;
     align-items: center;
 
+    
+
 
 }
 
-.onload-page .logo{
-
--webkit-animation: fadein 4s; /* Safari, Chrome and Opera > 12.1 */
-       -moz-animation: fadein 4s; /* Firefox < 16 */
-        -ms-animation: fadein 4s; /* Internet Explorer */
-         -o-animation: fadein 4s; /* Opera < 12.1 */
-            animation: fadein 4s;
+/*.main-content{
+    width: 100%;
+    height: 100vh;
+    background: url("https://source.unsplash.com/random/4000x4000") center no-repeat;
+    background-size: cover;
 }
-
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
+*/
