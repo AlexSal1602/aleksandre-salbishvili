@@ -1,3 +1,4 @@
+'use strict';
 //for remove loadder in 2 secs.
 
 const onLoadPage = document.querySelector('.onload-page')
