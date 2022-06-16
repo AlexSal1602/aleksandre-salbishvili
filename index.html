@@ -8,14 +8,26 @@
     <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script type="text/javascript" src="src/jquery-3.6.0.min.js"> </script> 
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+
+        <div class="set-icons">
+            <a href="https://www.instagram.com/alekosalbishvili/" target="_blank"> <img  src="src/icons/yellow/instagram.png" class="icon instagram" alt="instagram" ></a>
+            <a href="https://www.linkedin.com/in/aleksandre-salbishvili-695218192/" target="_blank"> <img src="src/icons/yellow/linkedin.png" class="icon linkedin" alt="linkedin"></a>
+            <a href="https://github.com/AlexSal1602" target="_blank"> <img src="src/icons/yellow/github.png" class="icon github" alt="github"></a>
+            <a href="https://www.behance.net/alexandsalbish" target="_blank"> <img src="src/icons/yellow/behance.png" class="icon behance" alt="behance"></a>
+
+                    
+<!--            vitom jquery linkiminichebao         onclick="$.mobile.changePage('https://www.instagram.com/alekosalbishvili/', { transition: 'slideup', changeHash: false });"
+ -->
+        </div>
             
 
         <ul>
-            <a href="#home"> <li>Home</li> </a>
+            <a class='active' href="#home"> <li>Home</li> </a>
             <a href="#about"> <li>About</li> </a>
             <a href="#"> <li>Work</li> </a>
             <a href="#contact"> <li>Contact</li> </a>
@@ -24,23 +36,28 @@
             <img src="src/Aleksandre.svg" alt="logo" class="logo">
         </atag-logo> -->
     </header>
+
+
     
     <main-wrapper id="main-wrapper">   
         
+        
+
         <home id="home">
         <about-wrapper>
             <h1>About</h1>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            
+            <img src="src/Me-mustach.png" class='my-photo' alt="Aleksandre photo" >
         </about-wrapper>
-        <img src="src/Me-mustach.png" class='my-photo' alt="Aleksandre photo" >
+        
         </home>
         <about id="about">
 
         </about>
 
         <contact id="contact">
-
+            <p>asalbishvili@hotmail.com</p> 
+            <p>+995 595 39 90 30</p>
         </contact>
         <div class="onload-page" >
             <img src="src/Aleksandre-yellow-logo.svg" alt="logo" class="logo-yellow">

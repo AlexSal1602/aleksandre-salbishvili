@@ -19,7 +19,7 @@ window.addEventListener('load', function(){
   
 
 
-
+//smoothed jump to id
 
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
