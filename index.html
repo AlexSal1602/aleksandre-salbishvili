@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <script type="text/javascript" src="src/jquery-3.6.0.min.js"> </script> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -26,11 +27,11 @@
         </div>
             
 
-        <ul>
-            <a class='active' href="#home"> <li>Home</li> </a>
-            <a href="#about"> <li>About</li> </a>
-            <a href="#"> <li>Work</li> </a>
-            <a href="#contact"> <li>Contact</li> </a>
+        <ul id="mynav">
+            <a class='nav-item active' href="#home" > <li><span">About</span></li> </a>
+            <!-- <a class="nav-item" href="#about"> <li><span>About</span></li> </a> -->
+            <a class="nav-item" href="#work"> <li><span>Work</span></li> </a>
+            <a class="nav-item" href="#contact"> <li><span>Contact</span></li> </a>
         </ul>
         <!--<atag-logo>
             <img src="src/Aleksandre.svg" alt="logo" class="logo">
@@ -45,20 +46,44 @@
 
         <home id="home">
         <about-wrapper>
-            <h1>About</h1>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <img src="src/Me-mustach.png" class='my-photo' alt="Aleksandre photo" >
+            <h1 class="reveal">About</h1>
+            <p class="reveal">I am <span style="font-weight: 900;">Aleksandre Salbishvili</span>, 27 years old, living in Tbilisi. Currently I am working at printing media company as a graphic designer with up to 5 years experience in this direction. In my own also make UI design and have some of Front-End skills. Nowadays trying to learn MERN development using Udemy courses.</p>
+            
+            <h2 class="reveal">Education</h2>
+            <img src="src/Me-png.png" class='my-photo' alt="Aleksandre photo" >
+            
+                <h4  style="font-weight: 900;">2012-2016&nbsp&nbsp&nbsp&nbsp&nbsp&nbspGeorgian Technical University &nbsp&nbsp|&nbsp&nbsp Informatic Technologies</h4>
+                <h4  style="font-weight: 900;">2019-2020&nbsp&nbsp&nbsp&nbsp&nbsp&nbspIsrael Tech Hub &nbsp&nbsp|&nbsp&nbsp Front-End Development</h4>
+
+            
         </about-wrapper>
         
         </home>
+
         <about id="about">
 
         </about>
 
+        
+
+
         <contact id="contact">
-            <p>asalbishvili@hotmail.com</p> 
-            <p>+995 595 39 90 30</p>
+
+            <contact-wrapper>
+                <h2>Contact me</h2>
+                <p id="mail"></p>asalbishvili@hotmail.com</p>
+                <p>+995 595 39 90 30</p>
+
+            </contact-wrapper>
+            
         </contact>
+
+       <!-- <div id="work">
+            <div class="work-containter">
+                ragaca abbba
+            </div>
+        </div> -->
+        
         <div class="onload-page" >
             <img src="src/Aleksandre-yellow-logo.svg" alt="logo" class="logo-yellow">
             <br><br>
@@ -68,6 +93,19 @@
     </main-wrapper>
     <script src="path/to/vanilla.js"></script>
     <script src="script.js"></script>
+    <!-- <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                location.reload(false);
+        });
+    });
+
+    </script> -->
+
+    <bottom>
+        <img src="src/Aleksandre-yellow-logo.svg" alt="logo" class="bottom-logo-yellow">
+    </bottom>
+    
     
 </body>
 </html>

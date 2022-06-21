@@ -1,5 +1,15 @@
 'use strict';
 
+const startPage = (() => {
+  const html = document.documentElement,
+        s = 'start-map'
+  html.classList.add(s)
+  window.addEventListener('load', function() {
+    setTimeout(() => {
+      html.classList.remove(s)
+    }, 2000) // the time must be at least equal to the duration of the CSS animation (personally I put a little more).
+  })
+})()
 
 //for remove loadder in 2 secs.
 
@@ -29,3 +39,95 @@ window.addEventListener('load', function(){
         });
     });
 });
+
+$(document).ready(function(){
+  $(window).scrollTop(0);
+});
+
+
+
+//element slides on mousemove, could be it on scroll.
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+
+
+setTimeout(() => {
+  window.addEventListener("mousemove", reveal);
+}, "2000")
+
+
+
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("mynav");
+var btns = header.getElementsByClassName("nav-item");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+
+
+
+
+
+//horizontal scroll
+/* let variation = 0;
+    document.addEventListener("wheel", function (e) {
+    variation += parseInt(e.deltaY);
+    console.log(variation);
+      //document.getElementById("body");
+      document.documentElement.scrollLeft = document.body.scrollLeft = (variation);
+    return false;
+    
+}, true); */
+
+
+
+// scroll to top
+window.onbeforeunload = function () { window.scrollTo(0,0); };
+
+
+
+
+
+
+
+const span = document.querySelector("mail");
+
+span.onclick = function() {
+  document.execCommand("copy");
+}
+
+span.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", span.textContent);
+    console.log(event.clipboardData.getData("text"))
+  }
+});
+
+
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}

@@ -42,9 +42,16 @@ body{
     
 }
 
-.active {
+header ul .active {
     background-color: #ffde00;
-    color: #000;
+    color: #000; 
+    height: 15px;
+    transition: width .3s, height .4s;
+}
+
+header ul .active:hover {
+    background-color: #ffde00;
+    color: #000; 
     height: 65px;
 }
 
@@ -78,6 +85,8 @@ header ul li{
     line-height: 65px;
     display: block;
     text-align: center;
+
+
     
 }
 
@@ -85,6 +94,12 @@ header ul li:hover {
     background-color: #ffde00;
     color: #000;
     height: 65px;
+
+    -webkit-transition: background-color .6s ease-out;
+    -moz-transition: background-color .6s ease-out;
+    -o-transition: background-color .6s ease-out;
+    transition: background-color .6s ease-out;
+
 }
 
 
@@ -165,11 +180,47 @@ main-wrapper{
     
     overflow-x: hidden;
     
+}
 
+contact-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100vw - 130px);
+    height: calc(100vh - 130px);
+    background-color: #ffde00;
+    position: relative;
+    color: #000;
+}
+
+work{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
+
+    background-color: #000;
 
 }
 
+
+.work-containter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(100vw - 130px);
+    height: calc(100vh - 130px);
+    background-color: #ffde00;
+    position: relative;
+    color: #000;
+}
 
 home{
     width: 100vw;
@@ -186,7 +237,7 @@ home{
 
     background-color: #000;
 
-    box-sizing: border-box;
+
     
     
       
@@ -227,15 +278,46 @@ about-wrapper p{
     margin: 15px 60px;
     max-width: 40%;
     text-align: justify;
+
+    
 }
+
+about-wrapper h2{
+    margin: 45px 60px 15px 60px;
+    max-width: 40%;
+    text-align: justify;
+
+
+    
+}
+
+about-wrapper h4{
+    margin: 5px 60px;
+    max-width: 50%;
+
+
+    
+}
+
+
+about-wrapper ul li{
+    text-decoration: none;
+    list-style: none;
+}
+
 
 about-wrapper h1{
     margin: 80px 0px 0px 60px;
-    font-size: 10em;
+    font-size: 10vw;
+    animation: 2s anim-lineUp ease-out infinite;
+    animation-fill-mode:forwards;
+    
 }
 
+
+
 about{
-    background-color: #00ff6a;
+    background-color: #000;
     width: 100vw;
     height: 100vh;
     
@@ -246,11 +328,13 @@ about{
 }
 
 contact{
-    background-color: #ff0095;
+    background-color: #000;
     width: 100vw;
     height: 100vh;
     
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
 }
 
@@ -262,6 +346,15 @@ contact{
     .my-photo {
       width: 100%;
       right: 25%;
+
+      display: none;
+    }
+
+    about-wrapper p{
+        max-width: 70vw;
+
+        text-overflow: ellipsis;
+        overflow: hidden; 
     }
 
     body{
@@ -297,11 +390,6 @@ atag-logo .logo{
     
 }
 
-/*.logo-yellow:after{
-    opacity: 1;
-    animation: animate 2s ease-in;
-}
-*/
 
 @keyframes logo-yellow {
     0%{transform: scale(1); -webkit-transform: scale(1.0); opacity: 1;}
@@ -358,4 +446,25 @@ atag-logo .logo{
 
 
 
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+
+  .bottom-logo-yellow{
+    max-height: 40px;
+
+    position: fixed;
+    bottom: 12px;
+  }
 
