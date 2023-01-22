@@ -109,25 +109,9 @@ window.onbeforeunload = function () { window.scrollTo(0,0); };
 
 
 
-const span = document.querySelector("mail");
-
-span.onclick = function() {
-  document.execCommand("copy");
-}
-
-span.addEventListener("copy", function(event) {
-  event.preventDefault();
-  if (event.clipboardData) {
-    event.clipboardData.setData("text/plain", span.textContent);
-    console.log(event.clipboardData.getData("text"))
-  }
+const mailClipboard = document.getElementById("mail");
+mailClipboard.addEventListener("click", () => {
+  navigator.clipboard.writeText("asalbishvili@hotmail.com").then(() => {
+    alert("Email copied to clipboard");
+  });
 });
-
-
-function copyToClipboard(element) {
-  var $temp = $("<input>");
-  $("body").append($temp);
-  $temp.val($(element).text()).select();
-  document.execCommand("copy");
-  $temp.remove();
-}
